@@ -1,0 +1,81 @@
+<div class="container add-student">
+    <div class="row student-header">
+        <span *ngIf="student && student.id">Redaguoti mokinio informaciją</span>
+        <span *ngIf="student && !student.id">Pridėti naują mokinį</span>
+    </div>
+    <div class="row student-form" *ngIf="student" style="padding-top: 40px;">
+        <div class="col-sm-4" style="margin-bottom: 25px">
+            <label>Vardas, pavardė</label>
+            <input class="form-control" type="text" [(ngModel)]="student.fullName" placeholder="Vardas, pavardė">
+        </div>
+
+        <div class="col-sm-4">
+            <label>Pavardė po santuokos</label>
+            <input class="form-control" type="text" [(ngModel)]="student.surnameAfterMarriage"
+                placeholder="Pavardė po santuokos">
+        </div>
+
+        <div class="col-sm-4">
+            <label>Gimimo data</label>
+            <input class="form-control" type="date" [(ngModel)]="student.birthdate" placeholder="Gimimo data">
+        </div>
+
+        <div class="col-sm-4" style="margin-bottom: 25px">
+            <label>Klasė</label>
+            <select class="form-control" [(ngModel)]="student.fkClass">
+                <option [ngValue]="undefined"  disabled selected>Klasė</option>
+                <option [ngValue]="null"></option>
+                <option *ngFor="let class of classes" [ngValue]="class.id">{{class.title}}</option>
+            </select>
+        </div>
+
+        <div class="col-sm-4" style="margin-bottom: 25px">
+                <label>Laida</label>
+                <select class="form-control" [(ngModel)]="student.fkGraduates">
+                    <option [ngValue]="null"></option>
+                    <option *ngFor="let grad of graduates" [ngValue]="grad.id">{{grad.title}} ({{grad.year}}m.)</option>
+                </select>
+            </div>
+
+        <div class="col-sm-4">
+            <label>Klasės vadovas</label>
+            <select class="form-control" [(ngModel)]="student.fkClassNavigationFkTeacher">
+                <option [ngValue]="null"></option>
+                <option *ngFor="let t of teachers" [ngValue]="t.id">{{t.fullName}}</option>
+            </select>
+        </div>
+
+        <div class="col-sm-4">
+            <label>Darbovietė, mokymosi įstaiga</label>
+            <input class="form-control" type="text" [(ngModel)]="student.workplace"
+                placeholder="Darbovietė, mokymosi įstaiga">
+        </div>
+
+        <div class="col-sm-4" style="margin-bottom: 25px">
+            <label>Adresas</label>
+            <input class="form-control" type="text" [(ngModel)]="student.address" placeholder="Adresas">
+        </div>
+
+        <div class="col-sm-4">
+            <label>Telefono Nr.</label>
+            <input class="form-control" type="text" [(ngModel)]="student.phone" placeholder="Telefono Nr.">
+        </div>
+
+        <div class="col-sm-4" style="margin-bottom: 25px">
+            <label>El. paštas</label>
+            <input class="form-control" type="email" [(ngModel)]="student.email" placeholder="El. paštas">
+        </div>
+
+        <div class="col-sm-4" style="margin-bottom: 25px">
+            <label>Pastabos</label>
+            <input class="form-control" type="text" [(ngModel)]="student.comment" placeholder="Pastabos">
+        </div>
+    </div>
+    <div class="row student-form" style="display: flow-root; width: 98%;">
+        <button type="button" class="warning-btn" *ngIf="activeParameter" (click)="delete()">Ištrinti</button>
+        <button type="button" class="btn btn-link" (click)="cancel()">Atgal</button>
+        <div class="submit-button">
+            <button type="submit" class="save-btn" (click)="apply()">Išsaugoti</button>
+        </div>
+    </div>
+</div>

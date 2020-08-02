@@ -1,0 +1,38 @@
+D:\KTU\Bakalauras\museum\backend\museumApi\museumApi\bin\Debug\netcoreapp2.1\museumApi.deps.json
+D:\KTU\Bakalauras\museum\backend\museumApi\museumApi\bin\Debug\netcoreapp2.1\museumApi.runtimeconfig.json
+D:\KTU\Bakalauras\museum\backend\museumApi\museumApi\bin\Debug\netcoreapp2.1\museumApi.runtimeconfig.dev.json
+D:\KTU\Bakalauras\museum\backend\museumApi\museumApi\bin\Debug\netcoreapp2.1\museumApi.dll
+D:\KTU\Bakalauras\museum\backend\museumApi\museumApi\bin\Debug\netcoreapp2.1\museumApi.pdb
+D:\KTU\Bakalauras\museum\backend\museumApi\museumApi\obj\Debug\netcoreapp2.1\museumApi.csprojAssemblyReference.cache
+D:\KTU\Bakalauras\museum\backend\museumApi\museumApi\obj\Debug\netcoreapp2.1\museumApi.csproj.CoreCompileInputs.cache
+D:\KTU\Bakalauras\museum\backend\museumApi\museumApi\obj\Debug\netcoreapp2.1\museumApi.RazorAssemblyInfo.cache
+D:\KTU\Bakalauras\museum\backend\museumApi\museumApi\obj\Debug\netcoreapp2.1\museumApi.RazorAssemblyInfo.cs
+D:\KTU\Bakalauras\museum\backend\museumApi\museumApi\obj\Debug\netcoreapp2.1\museumApi.AssemblyInfoInputs.cache
+D:\KTU\Bakalauras\museum\backend\museumApi\museumApi\obj\Debug\netcoreapp2.1\museumApi.AssemblyInfo.cs
+D:\KTU\Bakalauras\museum\backend\museumApi\museumApi\obj\Debug\netcoreapp2.1\museumApi.RazorTargetAssemblyInfo.cache
+D:\KTU\Bakalauras\museum\backend\museumApi\museumApi\obj\Debug\netcoreapp2.1\museumApi.dll
+D:\KTU\Bakalauras\museum\backend\museumApi\museumApi\obj\Debug\netcoreapp2.1\museumApi.pdb
+D:\KTU\Bakalauras\museum\backend\museumApi\museumApi\bin\Debug\netcoreapp2.1\museum.Application.dll
+D:\KTU\Bakalauras\museum\backend\museumApi\museumApi\bin\Debug\netcoreapp2.1\museum.Application.pdb
+D:\KTU\Bakalauras\museum\backend\museumApi\museumApi\obj\Debug\netcoreapp2.1\museumApi.csproj.CopyComplete
+D:\KTU\Bakalauras\museum\backend\museumApi\museumApi\bin\Debug\netcoreapp2.1\museum.EF.dll
+D:\KTU\Bakalauras\museum\backend\museumApi\museumApi\bin\Debug\netcoreapp2.1\museum.EF.pdb
+D:\KTU\4 KURSAS 2 SEMESTRAS\bakalauras\jjgmuziejus\museum\backend\museumApi\museumApi\bin\Debug\netcoreapp2.1\museumApi.deps.json
+D:\KTU\4 KURSAS 2 SEMESTRAS\bakalauras\jjgmuziejus\museum\backend\museumApi\museumApi\bin\Debug\netcoreapp2.1\museumApi.runtimeconfig.json
+D:\KTU\4 KURSAS 2 SEMESTRAS\bakalauras\jjgmuziejus\museum\backend\museumApi\museumApi\bin\Debug\netcoreapp2.1\museumApi.runtimeconfig.dev.json
+D:\KTU\4 KURSAS 2 SEMESTRAS\bakalauras\jjgmuziejus\museum\backend\museumApi\museumApi\bin\Debug\netcoreapp2.1\museumApi.dll
+D:\KTU\4 KURSAS 2 SEMESTRAS\bakalauras\jjgmuziejus\museum\backend\museumApi\museumApi\bin\Debug\netcoreapp2.1\museumApi.pdb
+D:\KTU\4 KURSAS 2 SEMESTRAS\bakalauras\jjgmuziejus\museum\backend\museumApi\museumApi\bin\Debug\netcoreapp2.1\museum.Application.dll
+D:\KTU\4 KURSAS 2 SEMESTRAS\bakalauras\jjgmuziejus\museum\backend\museumApi\museumApi\bin\Debug\netcoreapp2.1\museum.EF.dll
+D:\KTU\4 KURSAS 2 SEMESTRAS\bakalauras\jjgmuziejus\museum\backend\museumApi\museumApi\bin\Debug\netcoreapp2.1\museum.Application.pdb
+D:\KTU\4 KURSAS 2 SEMESTRAS\bakalauras\jjgmuziejus\museum\backend\museumApi\museumApi\bin\Debug\netcoreapp2.1\museum.EF.pdb
+D:\KTU\4 KURSAS 2 SEMESTRAS\bakalauras\jjgmuziejus\museum\backend\museumApi\museumApi\obj\Debug\netcoreapp2.1\museumApi.csprojAssemblyReference.cache
+D:\KTU\4 KURSAS 2 SEMESTRAS\bakalauras\jjgmuziejus\museum\backend\museumApi\museumApi\obj\Debug\netcoreapp2.1\museumApi.csproj.CoreCompileInputs.cache
+D:\KTU\4 KURSAS 2 SEMESTRAS\bakalauras\jjgmuziejus\museum\backend\museumApi\museumApi\obj\Debug\netcoreapp2.1\museumApi.RazorAssemblyInfo.cache
+D:\KTU\4 KURSAS 2 SEMESTRAS\bakalauras\jjgmuziejus\museum\backend\museumApi\museumApi\obj\Debug\netcoreapp2.1\museumApi.RazorAssemblyInfo.cs
+D:\KTU\4 KURSAS 2 SEMESTRAS\bakalauras\jjgmuziejus\museum\backend\museumApi\museumApi\obj\Debug\netcoreapp2.1\museumApi.AssemblyInfoInputs.cache
+D:\KTU\4 KURSAS 2 SEMESTRAS\bakalauras\jjgmuziejus\museum\backend\museumApi\museumApi\obj\Debug\netcoreapp2.1\museumApi.AssemblyInfo.cs
+D:\KTU\4 KURSAS 2 SEMESTRAS\bakalauras\jjgmuziejus\museum\backend\museumApi\museumApi\obj\Debug\netcoreapp2.1\museumApi.RazorTargetAssemblyInfo.cache
+D:\KTU\4 KURSAS 2 SEMESTRAS\bakalauras\jjgmuziejus\museum\backend\museumApi\museumApi\obj\Debug\netcoreapp2.1\museumApi.csproj.CopyComplete
+D:\KTU\4 KURSAS 2 SEMESTRAS\bakalauras\jjgmuziejus\museum\backend\museumApi\museumApi\obj\Debug\netcoreapp2.1\museumApi.dll
+D:\KTU\4 KURSAS 2 SEMESTRAS\bakalauras\jjgmuziejus\museum\backend\museumApi\museumApi\obj\Debug\netcoreapp2.1\museumApi.pdb

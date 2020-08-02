@@ -1,0 +1,22 @@
+D:\KTU\Bakalauras\museum\backend\museumApi\museum.EF\bin\Debug\netcoreapp2.1\museum.EF.deps.json
+D:\KTU\Bakalauras\museum\backend\museumApi\museum.EF\bin\Debug\netcoreapp2.1\museum.EF.dll
+D:\KTU\Bakalauras\museum\backend\museumApi\museum.EF\bin\Debug\netcoreapp2.1\museum.EF.pdb
+D:\KTU\Bakalauras\museum\backend\museumApi\museum.EF\obj\Debug\netcoreapp2.1\museum.EF.csproj.CoreCompileInputs.cache
+D:\KTU\Bakalauras\museum\backend\museumApi\museum.EF\obj\Debug\netcoreapp2.1\museum.EF.AssemblyInfoInputs.cache
+D:\KTU\Bakalauras\museum\backend\museumApi\museum.EF\obj\Debug\netcoreapp2.1\museum.EF.AssemblyInfo.cs
+D:\KTU\Bakalauras\museum\backend\museumApi\museum.EF\obj\Debug\netcoreapp2.1\museum.EF.dll
+D:\KTU\Bakalauras\museum\backend\museumApi\museum.EF\obj\Debug\netcoreapp2.1\museum.EF.pdb
+D:\KTU\Bakalauras\museum\backend\museumApi\museum.EF\bin\Debug\netcoreapp2.1\museum.EF.runtimeconfig.json
+D:\KTU\Bakalauras\museum\backend\museumApi\museum.EF\bin\Debug\netcoreapp2.1\museum.EF.runtimeconfig.dev.json
+D:\KTU\Bakalauras\museum\backend\museumApi\museum.EF\obj\Debug\netcoreapp2.1\museum.EF.csprojAssemblyReference.cache
+D:\KTU\4 KURSAS 2 SEMESTRAS\bakalauras\jjgmuziejus\museum\backend\museumApi\museum.EF\bin\Debug\netcoreapp2.1\museum.EF.deps.json
+D:\KTU\4 KURSAS 2 SEMESTRAS\bakalauras\jjgmuziejus\museum\backend\museumApi\museum.EF\bin\Debug\netcoreapp2.1\museum.EF.runtimeconfig.json
+D:\KTU\4 KURSAS 2 SEMESTRAS\bakalauras\jjgmuziejus\museum\backend\museumApi\museum.EF\bin\Debug\netcoreapp2.1\museum.EF.runtimeconfig.dev.json
+D:\KTU\4 KURSAS 2 SEMESTRAS\bakalauras\jjgmuziejus\museum\backend\museumApi\museum.EF\bin\Debug\netcoreapp2.1\museum.EF.dll
+D:\KTU\4 KURSAS 2 SEMESTRAS\bakalauras\jjgmuziejus\museum\backend\museumApi\museum.EF\bin\Debug\netcoreapp2.1\museum.EF.pdb
+D:\KTU\4 KURSAS 2 SEMESTRAS\bakalauras\jjgmuziejus\museum\backend\museumApi\museum.EF\obj\Debug\netcoreapp2.1\museum.EF.csproj.CoreCompileInputs.cache
+D:\KTU\4 KURSAS 2 SEMESTRAS\bakalauras\jjgmuziejus\museum\backend\museumApi\museum.EF\obj\Debug\netcoreapp2.1\museum.EF.AssemblyInfoInputs.cache
+D:\KTU\4 KURSAS 2 SEMESTRAS\bakalauras\jjgmuziejus\museum\backend\museumApi\museum.EF\obj\Debug\netcoreapp2.1\museum.EF.AssemblyInfo.cs
+D:\KTU\4 KURSAS 2 SEMESTRAS\bakalauras\jjgmuziejus\museum\backend\museumApi\museum.EF\obj\Debug\netcoreapp2.1\museum.EF.dll
+D:\KTU\4 KURSAS 2 SEMESTRAS\bakalauras\jjgmuziejus\museum\backend\museumApi\museum.EF\obj\Debug\netcoreapp2.1\museum.EF.pdb
+D:\KTU\4 KURSAS 2 SEMESTRAS\bakalauras\jjgmuziejus\museum\backend\museumApi\museum.EF\obj\Debug\netcoreapp2.1\museum.EF.csprojAssemblyReference.cache

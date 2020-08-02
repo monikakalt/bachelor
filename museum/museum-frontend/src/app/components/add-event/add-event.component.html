@@ -1,0 +1,44 @@
+<div class="container add-event">
+  <div class="row event-header">
+    <span *ngIf="event && event.id">Redaguoti rezervaciją</span>
+    <span *ngIf="event && !event.id">Pridėti rezervaciją</span>
+  </div>
+  <div class="row event-form" *ngIf="event && retrievedUser" style="padding-top: 40px;" (change)="validate()">
+    <div class="form-group" style="width: 100%;">
+      <label>Naudotojas</label>
+      <input class="form-control" type="text" [(ngModel)]="retrievedUser.fullName" placeholder="Naudotojas" disabled
+        required>
+    </div>
+    <div class="form-group" style="width: 100%;">
+      <label>Pavadinimas</label>
+      <input class="form-control" type="text" [(ngModel)]="event.title" placeholder="Įvykio pavadinimas"
+        (change)="validate()" [disabled]="!canEdit" required>
+    </div>
+    <div class="form-group" style="width: 100%;">
+      <label>El. paštas</label>
+      <input class="form-control" type="email" placeholder="El. paštas" [(ngModel)]="event.email" (change)="validate()"
+      [disabled]="!canEdit" required>
+    </div>
+    <div class="form-group" style="width: 100%;">
+      <label>Pradžios laikas</label>
+      <input class="form-control" [(ngModel)]="event.start" [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" [disabled]="!canEdit"
+        (dateTimeInput)="validate()" placeholder="Pradžios laikas">
+      <owl-date-time style="z-index:1090 !" #dt1></owl-date-time>
+    </div>
+    <div class="form-group" style="width: 100%;">
+      <label>Pabaigos laikas</label>
+      <input class="form-control" [(ngModel)]="event.end" [owlDateTime]="dt2" [owlDateTimeTrigger]="dt2" [disabled]="!canEdit"
+        (dateTimeInput)="validate()" placeholder="Pabaigos laikas">
+      <owl-date-time style="z-index:1090 !" #dt2></owl-date-time>
+      <div *ngIf="event.end < event.start"
+      class="alert alert-danger">Netinkamas įvykio pabaigos laikas</div>
+    </div>
+  </div>
+  <div class="row event-form" style="display: flow-root;">
+    <button type="button" class="warning-btn" *ngIf="activeParameter" (click)="delete()" [disabled]="!canEdit">Ištrinti</button>
+    <button type="button" class="btn btn-link" (click)="cancel()">Atgal</button>
+    <div class="submit-button">
+      <button type="submit" class="save-btn" [disabled]="!isValid || !canEdit" (click)="apply()">Išsaugoti</button>
+    </div>
+  </div>
+</div>

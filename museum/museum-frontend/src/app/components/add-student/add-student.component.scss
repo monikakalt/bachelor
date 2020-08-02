@@ -1,0 +1,48 @@
+::ng-deep .cdk-overlay-container{
+    z-index: 1200 !important;
+}
+
+input[type="file"]
+{
+  display: none;
+}
+.fileUpload input.upload 
+{
+    display: inline-block;
+}
+
+.add-student {
+  width: 80%;
+  height: 565px;
+  margin: 0 auto;
+  margin-top: 2%;
+  background-color: white;
+}
+
+.student-form {
+  margin: 0 auto;
+}
+
+.student-header {
+  text-transform: uppercase;
+  padding-left: 160px;
+  padding-top: 18px;
+  margin: 0 auto;
+}
+
+.submit-button {
+  float: right;
+  position: relative;
+  float: right;
+}
+
+.login-input {
+  width: 100%;
+  margin: 0.75rem 0;
+  padding: 1rem;
+  border-radius: 2rem;
+  outline: none;
+  border: none;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  animation-duration: 2s;
+}

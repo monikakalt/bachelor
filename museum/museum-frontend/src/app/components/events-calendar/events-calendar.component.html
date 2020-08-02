@@ -1,0 +1,14 @@
+<div class="container" style="margin-top: 15px">
+  <div>
+    <div style="float: right;width: 46px;">
+      <span class="input-group-text" title="Rezervuoti" id="basic-addon1" (click)="add()"
+        style="cursor: pointer;">
+        <img height="19" src="../../../assets/icons/plus.svg">
+      </span></div>
+
+    <div *ngIf="calendarOptions">
+      <ng-fullcalendar #ucCalendar [options]="calendarOptions" (eventClick)="openEvent($event.detail)"
+        (eventDrop)="updateEvent($event.detail)" (eventResize)="updateEvent($event.detail)"></ng-fullcalendar>
+    </div>
+  </div>
+</div>

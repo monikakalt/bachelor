@@ -1,0 +1,61 @@
+<div class="register" *ngIf="!authenticated">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="register-card">
+        <main class="register-content">
+          <h1 class="register-text">Registruotis</h1>
+          <form class="register-form" [formGroup]="registerForm" (ngSubmit)="submitForm(registerForm.value)">
+            <div class="form-group"
+              [ngClass]="{'has-error':!registerForm.controls['fullName'].valid && registerForm.controls['fullName'].touched}">
+              <div><label for="fullName" class="label">Vardas, pavardė</label></div>
+              <input class="register-input" type="text" placeholder="Vardas, pavardė"
+                [formControl]="registerForm.controls['fullName']">
+              <div
+                *ngIf="registerForm.controls['fullName'].hasError('required') && registerForm.controls['fullName'].touched"
+                class="alert alert-danger">Vardas ir pavardė privalomi</div>
+            </div>
+
+            <div class="form-group"
+              [ngClass]="{'has-error':!registerForm.controls['email'].valid && registerForm.controls['email'].touched}">
+              <div><label for="email" class="label">El. paštas</label></div>
+              <input class="register-input" type="email" placeholder="El. paštas"
+                [formControl]="registerForm.controls['email']">
+              <div *ngIf="registerForm.controls['email'].hasError('required') && registerForm.controls['email'].touched"
+                class="alert alert-danger">El. paštas privalomas</div>
+              <div *ngIf="registerForm.controls['email'].hasError('email') && registerForm.controls['email'].touched"
+                class="alert alert-danger">Neteisingas el. paštas</div>
+            </div>
+
+            <div class="form-group"
+              [ngClass]="{'has-error':!registerForm.controls['password'].valid && registerForm.controls['password'].touched}">
+              <div><label for="password" class="label">Slaptažodis</label></div>
+              <input name="password" class="register-input" type="password" placeholder="Slaptažodis"
+                [formControl]="registerForm.controls['password']">
+              <div
+                *ngIf="registerForm.controls['password'].hasError('required') && registerForm.controls['password'].touched"
+                class="alert alert-danger">Slaptažodis privalomas</div>
+            </div>
+
+            <div class="form-group"
+              [ngClass]="{'has-error':!registerForm.controls['password'].valid && registerForm.controls['confirmPassword'].touched}">
+              <div><label for="confirmPassword" class="label">Patvirtinti slaptažodį</label></div>
+              <input name="confirmPassword" class="register-input" type="password" appConfirmEqualValidator="password"
+                placeholder="Patvirtinti slaptažodį" [formControl]="registerForm.controls['confirmPassword']">
+              <div
+                *ngIf="registerForm.controls['confirmPassword'].hasError('required') && registerForm.controls['confirmPassword'].touched"
+                class="alert alert-danger">Slaptažodis privalomas</div>
+              <div
+                *ngIf="registerForm.controls['confirmPassword'].hasError('notEqual')  && registerForm.controls['confirmPassword'].touched "
+                class="alert alert-danger">Slaptažodžiai nesutampa</div>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="register-btn" [disabled]="!registerForm.valid">Registruotis</button>
+              <button type="button" class="btn btn-link" (click)="cancel()" data-dismiss="modal">Atšaukti</button>
+            </div>
+          </form>
+        </main>
+      </div>
+    </div>
+  </div>
+</div>

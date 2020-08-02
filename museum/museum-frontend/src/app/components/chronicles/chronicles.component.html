@@ -1,0 +1,55 @@
+<div class="container" appOutside (click)="clickedOut($event)">
+  <div class="input-group mb-3" style="bottom: -17px;">
+    <input (keyup)="onQuickFilterChanged($event)" [(ngModel)]="query" id="quickFilterInput" class="form-control"
+      placeholder="Ieškoti" />
+    <div class="input-group-prepend">
+      <span (click)="clearSearch()" class="input-group-text" id="basic-addon1" style="cursor: pointer;"
+        title="Išvalyti">
+        <img height="19" src="../../../assets/icons/x.svg">
+      </span>
+    </div>
+    <div *ngIf="isAdmin" class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1" (click)="add()" style="cursor: pointer;"
+        title="Pridėti metraštį">
+        <img height="19" [src]='"../../../assets/icons/plus.svg"'>
+      </span>
+    </div>
+  </div>
+
+<div *ngIf="images">
+    <ngx-image-gallery
+  #ngxImageGallery
+  [images]="images"
+  [conf]="conf"
+  (onOpen)="galleryOpened($event)"
+  (onClose)="galleryClosed()"
+  (onImageClicked)="galleryImageClicked($event)"
+  (onImageChange)="galleryImageChanged($event)"
+  (onDelete)="deleteImage($event)">
+</ngx-image-gallery>
+</div>
+
+  <div *ngIf="chronicles">
+    <div class="chronicle-container" *ngFor="let c of chronicles">
+      <div class="chronicle-box">
+        <div class="chronicle-title">
+          <span>{{c.title}}</span>
+          <div><span>{{c.date | date: 'yyyy-MM-dd'}}</span></div>
+        </div>
+        <div class="slider">
+          <img *ngFor="let photo of c.photos; let i = index" class="slide materialboxed" [hidden]="!isActive(i)"
+            (click)="openGallery(i, c.photos)" [@changeDivSize]=currentState (change)="isActive(i)"
+            src="../../../chronicles/{{photo.title}}" />
+        </div>
+        <span *ngIf="isAdmin" class="input-group-text" id="basic-addon1" (click)="edit(c.id)"
+          style="margin-left: 13px;cursor: pointer; float: left; margin-right: 10px;" title="Redaguoti metraštį">
+          <img height="19" src="../../../assets/icons/edit.svg">
+        </span>
+        <span *ngIf="isAdmin" class="input-group-text" id="basic-addon1" (click)="delete(c.id)" style="cursor: pointer; float: left"
+          title="Ištrinti metraštį">
+          <img height="19" src="../../../assets/icons/trashcan.svg">
+        </span>
+      </div>
+    </div>
+  </div>
+  </div>

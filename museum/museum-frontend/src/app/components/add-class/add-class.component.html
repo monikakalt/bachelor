@@ -1,0 +1,27 @@
+<div class="container add-event" style="height: 498px;">
+  <div class="row event-header">
+    <span *ngIf="classInfo && classInfo.id">Redaguoti klasę</span>
+    <span *ngIf="classInfo && !classInfo.id">Pridėti klasę</span>
+  </div>
+  <div class="row event-form" *ngIf="classInfo" style="padding-top: 40px;">
+      <div class="form-group" style="width: 100%;">
+          <label>Pavadinimas</label>
+          <input class="form-control" type="text" [(ngModel)]="classInfo.title" placeholder="Klasės pavadinimas" required>
+        </div>
+
+    <div class="form-group" style="width: 100%;">
+      <label>Klasės vadovas</label>
+            <select class="form-control" [(ngModel)]="classInfo.fkTeacher">
+              <option [ngValue]="undefined"  disabled selected>Klasės vadovas</option>
+                <option *ngFor="let t of teachers" [ngValue]="t.id">{{t.fullName}}</option>
+            </select>
+    </div>
+  </div>
+  <div class="row event-form" style="display: flow-root;">
+    <button type="button" class="warning-btn" *ngIf="activeParameter" (click)="delete()">Ištrinti</button>
+    <button type="button" class="btn btn-link" (click)="cancel()">Atgal</button>
+    <div class="submit-button">
+        <button type="submit" class="save-btn" (click)="apply()">Išsaugoti</button>
+    </div>
+  </div>
+</div>

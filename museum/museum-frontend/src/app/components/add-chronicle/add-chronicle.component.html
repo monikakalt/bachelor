@@ -1,0 +1,91 @@
+<div class="container add-chronicle" style="position:relative; margin-top: 90px;">
+  <div class="row chronicle-header">
+    <span *ngIf="chronicle && chronicle.id">Redaguoti metraštį</span>
+    <span *ngIf="chronicle && !chronicle.id">Pridėti naują metraštį</span>
+  </div>
+  <div class="row chronicle-form" *ngIf="chronicle" style="padding-top: 40px;">
+    <div class="form-group" style="margin-right: 10px;">
+      <label>Pavadinimas</label>
+      <input class="form-control" type="title" placeholder="Metraščio pavadinimas" [(ngModel)]="chronicle.title">
+    </div>
+
+    <div class="form-group" style="position:relative;">
+      <label>Data</label>
+      <input class="form-control" style="margin:0 0 0 4px;" [(ngModel)]="chronicle.date" matInput
+        [matDatepicker]="picker" placeholder="Metraščio data">
+      <mat-datepicker-toggle class="matt" matSuffix [for]="picker">
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-datepicker-toggle>
+    </div>
+    <div class="form-group">
+
+      <div style="height: 38px;margin-top: 32px;margin-bottom: 0px;margin-left: 10px;" class="save-btn">
+        <label>
+            <img style="margin-bottom: 9px;padding-bottom: 12px;" height="20" src="../../../assets/icons/pluswhite.svg?color={{'#ffe0a3'}}" title="Įkelti">
+          <input accept="image/*" [(ngModel)]="data" type="file" multiple
+            (change)="detectFiles($event)">
+        </label>
+      </div>
+    </div>
+
+    <div *ngIf="urls.length > 0 && chronicle && !chronicle.id">
+      <ngu-carousel style="height: 150px; top: 30px;" #myCarousel [inputs]="carouselConfig"
+        [dataSource]="carouselItems">
+        <ngu-tile *nguCarouselDef="let item;" (click)="deletePhotoItem(item)">
+            <div class="card">
+                  <div class="shadow" style="height: 160px">
+                    <div  class="middle">
+                      <div style=" background-color:#ffe0a3">
+                        <img  height="20" src="../../../assets/icons/trashcan.svg?color={{'#ffe0a3'}}" title="Ištrinti">
+                      </div>
+                    </div>
+                    <div class="tile">
+                        <img class="rounded mx-auto d-block image" src="{{urls[item]}}"
+                        style="background-size: cover; height: 100%; width: 100%">
+                    </div>
+    
+                  </div>
+                <div>
+                </div>
+              </div>
+        </ngu-tile>
+        <button NguCarouselPrev class="leftRs">&lt;</button>
+        <button NguCarouselNext class="rightRs">&gt;</button>
+      </ngu-carousel>
+    </div>
+
+    <div *ngIf="chronicle && chronicle.id">
+      <ngu-carousel style="height: 150px; top: 30px;" #myCarousel [inputs]="carouselConfig"
+        [dataSource]="carouselItems">
+        <ngu-tile *nguCarouselDef="let item;" (click)="deletePhotoItem(item)"  class="item">
+          <div class="card">
+              <div class="shadow" style="height: 160px">
+                <div class="middle">
+                  <div style=" background-color:#ffe0a3">
+                    <img height="20" src="../../../assets/icons/trashcan.svg?color={{'#ffe0a3'}}" title="Ištrinti">
+                  </div>
+                </div>
+
+                <div class="tile">
+                  <img class="rounded mx-auto d-block image" src="../../../assets/chronicles/{{urls[item]}}"
+                    style="background-size: cover; height: 100%; width: 100%">
+                </div>
+              </div>
+            <div>
+            </div>
+          </div>
+        </ngu-tile>
+        <button NguCarouselPrev class="leftRs">&lt;</button>
+        <button NguCarouselNext class="rightRs">&gt;</button>
+      </ngu-carousel>
+    </div>
+
+  </div>
+  <div class="row chronicle-form bottom">
+    <button type="button" class="warning-btn" *ngIf="activeParameter" (click)="delete()">Ištrinti</button>
+    <button type="button" class="btn btn-link" (click)="cancel()">Atgal</button>
+    <div class="submit-button" style="margin-right: 10px;">
+      <button type="button" class="save-btn" (click)="apply($event)">Išsaugoti</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="EPPlus" Version="4.5.2" />
+    <PackageReference Include="MailKit" Version="2.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Office.Interop.Excel" Version="15.0.4420.1017" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\museum.EF\museum.EF.csproj" />
+  </ItemGroup>
+
+</Project>

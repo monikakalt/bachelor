@@ -1,0 +1,138 @@
+::ng-deep .cdk-overlay-container{
+    z-index: 1200 !important;
+}
+
+input[type="file"]
+{
+  display: none;
+}
+.fileUpload input.upload 
+{
+    display: inline-block;
+}
+
+.add-chronicle {
+  width: 100%;
+  height: 440px;
+  margin: 0 auto;
+  margin-top: 65px;
+  background-color: white;
+}
+
+.chronicle-form {
+  margin: 0 auto;
+}
+
+.chronicle-header {
+  text-transform: uppercase;
+  padding-left: 160px;
+  padding-top: 18px;
+  margin: 0 auto;
+}
+
+.submit-button {
+  float: right;
+  position: relative;
+  float: right;
+}
+
+.matt {
+  display: block;
+  position: absolute;
+  top: 30px;
+  right: 10px;
+}
+
+.bottom {
+  margin-bottom: 10px;
+  display: flow-root;
+  width: 98%;
+  position: absolute;
+  bottom: 0;
+}
+
+
+.tile {
+  box-shadow: none !important;
+  min-height: 200px;
+  max-height: 220px;
+  background-size: cover ;
+}
+
+.tile[_ngcontent-usm-c8] {
+  box-shadow: none !important;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.leftRs {
+  position: absolute;
+    margin: auto;
+    top: 11px;
+    bottom: 0;
+    width: 30px;
+    height: 30px;
+
+  border-radius: 999px;
+  left: 0;
+}
+
+.rightRs {
+  position: absolute;
+  margin: auto;
+  top: 11px;
+  bottom: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  right: 0;
+}
+
+ngu-tile:hover{
+  background-color: #ffe0a3;
+}
+
+
+.card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  border: none;
+  word-wrap: break-word;
+  background-color: #1d1d1d;
+}
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .3s ease;
+  backface-visibility: hidden;
+}
+.shadow {
+  text-align: left;
+}
+.shadow:hover .image {
+  opacity: 0.1;
+}
+.middle {
+  transition: .3s ease;
+  opacity: 0;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  left: 45%;
+  top: 60px;
+  margin: 0 auto;
+}
+.shadow:hover .middle {
+  opacity: 1;
+}

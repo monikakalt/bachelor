@@ -1,0 +1,205 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("./bootstrap.css");
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~ng-pick-datetime/assets/style/picker.min.css";
+@import "~ag-grid-community/dist/styles/ag-grid.css";
+@import "~ag-grid-community/dist/styles/ag-theme-balham.css";
+  
+//   @media only screen and (max-width: 992px) {
+//     .nav-item button {
+//       margin: 10px 0;
+//     }
+//     .filter-ch {
+//       width: 100%
+      
+//     }
+//  }
+html {
+    position: relative;
+    min-height: 100%;
+    background-color: #EEEEEE;
+}
+
+.mat-sidenav-container, .mat-sidenav-content, .mat-tab-body-content {
+    transform: none !important;
+}
+
+body {
+    background-color: #EEEEEE;
+  //  margin: 0 0 80px;
+    /* bottom = footer height */
+}
+
+footer {
+    background-color: #f7a600 !important;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 22px;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* SHADE DAYS IN THE PAST */
+td.fc-day.fc-past {
+    background-color: #d4d6d4;
+}
+
+td.fc-day.fc-today {
+    background-color: #ffd378;
+}
+
+.ag-paging-panel {
+    background-color: #EEEEEE;
+}
+
+.ag-theme-balham .ag-row-selected {
+    background-color: lighten( #f7a600, 8%) !important;
+}
+
+// .fc-event .fc-content {
+//     background-color: #F7A707;
+// }
+
+.fc-event .fc-content:hover {
+    background: linear-gradient(to right, #f7a600, #f7e20c);
+  }
+
+.fc .fc-button-group>* {
+    background-color: #F7A707;
+}
+
+.fc .fc-button-group>*:hover {
+    background: linear-gradient(to right, #f7a600, #f7e20c);
+}
+
+.fc-today-button:hover {
+    background: linear-gradient(to right, #f7a600, #f7e20c);
+}
+.btn-primary {
+    background-color: #3f7e2e !important;
+}
+
+.swal2-styled.swal2-confirm {
+    background: linear-gradient(#c70909, #fbc81b);
+    padding: 1rem !important;
+    border-radius: 2rem !important;
+    outline: none !important;
+    border: none !important;
+    color: white !important;
+    font-size: 1.1rem !important;
+    cursor: pointer !important;
+    margin-top: 1rem !important;
+    animation-duration: 2s !important;
+}
+
+.swal2-styled.swal2-confirm:hover {
+    background: linear-gradient(to right, #f7a600, #f7e20c) !important;
+  }
+
+.swal2-cancel.swal2-styled {
+    background: linear-gradient(#3f7e2e, #7ac374) !important;
+    padding: 1rem !important;
+    border-radius: 2rem !important;
+    outline: none !important;
+    border: none !important;
+    color: white !important;
+    font-size: 1.1rem !important;
+    cursor: pointer !important;
+    margin-top: 1rem !important;
+    animation-duration: 2s !important;
+}
+
+.swal2-cancel.swal2-styled:hover {
+    background: linear-gradient(to right, #f7a600, #f7e20c) !important;
+  }
+
+tr {
+    width: 10px;
+}
+
+.save-btn {
+    background: linear-gradient(#3f7e2e, #7ac374);
+    padding: 1rem;
+    border-radius: 2rem;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer !important;
+    animation-duration: 2s;
+  }
+
+  .warning-btn {
+    background: linear-gradient(#c70909, #f7a600);
+    padding: 1rem;
+    border-radius: 2rem;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer !important;
+    animation-duration: 2s;
+  }
+
+  .warning-btn:hover {
+    cursor: pointer !important;
+    background: linear-gradient(to right, #f7a600, #f7e20c);
+  }
+  
+  .save-btn:hover {
+    cursor: pointer !important;
+    background: linear-gradient(to right, #f7a600, #f7e20c);
+  }
+
+  //-----
+  /* MODAL STYLES
+-------------------------------*/
+app-modal {
+    /* modals are hidden by default */
+    display: none;
+
+    .app-modal {
+        /* modal container fixed across whole screen */
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        /* z-index must be higher than .app-modal-background */
+        z-index: 1000;
+        
+        /* enables scrolling for tall modals */
+        overflow: auto;
+
+        .app-modal-body {
+            padding: 20px;
+            background: #fff;
+
+            /* margin exposes part of the modal background */
+            margin: 40px;
+        }
+    }
+
+    .app-modal-background {
+        /* modal background fixed across whole screen */
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        /* semi-transparent black  */
+        background-color: #000;
+        opacity: 0.75;
+        
+        /* z-index must be below .app-modal and above everything else  */
+        z-index: 900;
+    }
+}
+
+body.app-modal-open {
+    /* body overflow is hidden to hide main scrollbar when modal window is open */
+    overflow: hidden;
+}

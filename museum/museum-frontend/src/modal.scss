@@ -1,0 +1,132 @@
+@mixin modal($background: rgba(255, 255, 255, 0.5), $zindex: 2000) {
+    .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        outline: 0;
+      }
+}
+
+@mixin modalDialog($background: white, $border: 1px solid black, $shadow: 0 0 50px darken($color_background, 10%), $border-radius: 5px, $zindex: 2001, $header_background: black, $header_color: white) {
+    .modal-dialog {
+        //position: fixed;
+        background: $background;
+        border: $border;
+        border-radius: $border-radius;
+        box-shadow: $shadow;
+        z-index: $zindex;
+        overflow: hidden;
+        max-height: 100%;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+
+        transform: scale(0.7);
+        opacity: 0;
+        transition: transform 0.15s, opacity 0.15s;
+    }
+
+    .modal-headline {
+        text-transform: uppercase;
+        font-weight: bold;
+        border-bottom: $border;
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        flex-grow: 0;
+        color: $header_color;
+    }
+
+    .modal-header {
+        padding: 10px 20px;
+        background: $header_background;
+        color: $header_color;
+        font-size: 18px;
+        text-transform: uppercase;
+        >div[header] {
+            display: flex;
+        }
+
+        >div[header]>* {
+            display: inline-block;
+        }
+    }
+
+    // Deprecated
+    .modal-toolheader {
+        margin: -10px -19px -10px 10px;
+        display: flex !important;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        align-content: flex-start;
+        justify-content: flex-start;
+        text-overflow: ellipsis;
+    }
+
+    // Deprecated
+    .modal-toolheader-input {
+        flex-grow: 1;
+    }
+
+    // Deprecated
+    .modal-toolheader-buttons {
+        white-space: nowrap;
+        flex-grow: 0;
+    }
+
+    .modal-footer {
+        padding: 10px 20px;
+        background: $header_background;
+        color: $header_color;
+        text-align: center;
+        bottom: 0;
+        flex-grow: 0;
+    }
+
+    .modal-content {
+        overflow: auto;
+        padding: 20px 30px;
+        flex-grow: 1;
+        position: relative;
+
+        >div[body] {
+            width: 100%;
+            position: relative;
+        }
+    }
+
+
+    .modal-toolbar {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex-flow: row wrap;
+        align-items: stretch;
+        align-content: flex-start;
+        margin: -10px -30px 20px -30px;
+        padding: 0px 20px;
+    }
+
+    .modal-text-header {
+        margin-top: 5px;
+    }
+}
+
+.modal-opaque-input-header {
+    flex-grow: 1;
+    background: inherit !important;
+    border: 0 !important;
+    color: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    font-size: inherit !important;
+    text-overflow: ellipsis !important;
+    padding: 0 !important;
+    &:focus {
+        outline: none;
+    }
+}

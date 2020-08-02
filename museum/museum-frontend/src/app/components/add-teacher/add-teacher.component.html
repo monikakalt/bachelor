@@ -1,0 +1,23 @@
+<div class="container add-event" style="height: 498px;">
+  <div class="row event-header">
+    <span *ngIf="teacher && teacher.id">Redaguoti mokytoją</span>
+    <span *ngIf="teacher && !teacher.id">Pridėti mokytoją</span>
+  </div>
+  <div class="row event-form" *ngIf="teacher" style="padding-top: 40px;">
+      <div class="form-group" style="width: 100%;">
+          <label>Mokytojo vardas, pavardė</label>
+          <input class="form-control" type="text" [(ngModel)]="teacher.fullName" placeholder="Mokytojo vardas ir pavardė" required>
+        </div>
+        <div class="form-group" style="width: 100%;">
+          <label>Dalykas</label>
+          <input class="form-control" type="text" [(ngModel)]="teacher.subject" placeholder="Dalykas" required>
+        </div>
+  </div>
+  <div class="row event-form" style="display: flow-root;">
+    <button type="button" class="warning-btn" *ngIf="activeParameter" (click)="delete()">Ištrinti</button>
+    <button type="button" class="btn btn-link" (click)="cancel()">Atgal</button>
+    <div class="submit-button">
+        <button type="submit" class="save-btn" (click)="apply()">Išsaugoti</button>
+    </div>
+  </div>
+</div>

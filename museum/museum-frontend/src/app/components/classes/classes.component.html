@@ -1,0 +1,22 @@
+<div class="container" style="max-width: 1400px;">
+    <div class="input-group mb-3" style="bottom: -17px;">
+      <input (keyup)="onQuickFilterChanged($event)" [(ngModel)]="query" id="quickFilterInput" class="form-control" placeholder="Ieškoti" />
+      <div class="input-group-prepend">
+        <span (click)="clearSearch()" class="input-group-text" id="basic-addon1" style="cursor: pointer;"
+          title="Išvalyti">
+          <img height="19" src="../../../assets/icons/x.svg">
+        </span>
+      </div>
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1" (click)="add()" style="cursor: pointer;" title="Pridėti mokinį">
+          <img height="19" src="../../../assets/icons/plus.svg">
+        </span>
+      </div>
+    </div>
+  
+    <ag-grid-angular #agGrid style="width: 100%; height: 80vh;" class="ag-theme-balham" [gridOptions]="gridOptions"
+      [columnDefs]="columnDefs" [paginationAutoPageSize]="true" [pagination]="true"
+      [rowData]="classes$" [rowSelection]="rowSelection" [localeText]="localeText" (gridReady)="onGridReady($event)"
+      (cellClicked)="onCellClicked($event)">
+    </ag-grid-angular>
+  </div>

@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+    aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active nav-link" style="cursor: pointer">
+        <img height="36px" style="margin-top: -7px;" a routerLink="/"
+          src="http://jjanonis.lt/wp-content/uploads/EMBLEMA.png">
+      </li>
+      <li class="nav-item" *ngIf="isAuthenticated()">
+        <a class="nav-link" a routerLink="metrasciai">Metraščiai</a>
+      </li>
+      <li class="nav-item" *ngIf="isAuthenticated() && isAdmin">
+        <a class="nav-link" a routerLink="mokiniai">Mokiniai</a>
+      </li>
+      <li class="nav-item" *ngIf="isAuthenticated() && isAdmin">
+        <a class="nav-link" a routerLink="laidos">Laidos</a>
+      </li>
+      <li class="nav-item" *ngIf="isAuthenticated() && isAdmin">
+        <a class="nav-link" a routerLink="klases">Klasės</a>
+      </li>
+      <li class="nav-item" *ngIf="isAuthenticated() && isAdmin">
+        <a class="nav-link" a routerLink="mokytojai">Mokytojai</a>
+      </li>
+      <li class="nav-item" *ngIf="isAuthenticated()">
+        <a class="nav-link" a routerLink="kalendorius">Kalendorius</a>
+      </li>
+    </ul>
+
+    <ul class="nav navbar-nav ml-auto">
+      <li class="nav-item" *ngIf="isAuthenticated()">
+        <span class="nav-link" *ngIf="isAuthenticated()" style="cursor: pointer;" (click)="logout()" title="Atsijungti">
+          <img height="30" src="../../../assets/icons/logout.svg">
+        </span>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="modal" *ngIf="!user" data-target="#loginModal">Prisijungti</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="modal" *ngIf="!user" data-target="#registerModal">Registruotis</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+<div id="loginModal" class="modal fade" role="dialog">
+  <loginForm></loginForm>
+</div>
+<div id="registerModal" class="modal fade" role="dialog">
+  <app-register></app-register>
+</div>

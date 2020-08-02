@@ -1,0 +1,42 @@
+::ng-deep .cdk-overlay-container{
+    z-index: 1200 !important;
+}
+
+body {
+  background-color: darkgrey;
+}
+
+input[type="file"]
+{
+  display: none;
+}
+.fileUpload input.upload 
+{
+    display: inline-block;
+}
+
+.add-event {
+  width: 600px;
+  margin: 0 auto;
+  margin-top: 90px;
+  background-color: white;
+}
+
+.event-form {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.event-header {
+  width: 500px;
+  text-transform: uppercase;
+  padding-left: 160px;
+  padding-top: 18px;
+  margin: 0 auto;
+}
+
+.submit-button {
+  float: right;
+  position: relative;
+  float: right;
+}
